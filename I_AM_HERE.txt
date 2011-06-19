@@ -1,2 +1,1 @@
-Chapter 6
-Modeling and viewing users, part I
+7.2.4 An Authentication method
