@@ -1,1 +1,1 @@
-7.2.4 An Authentication method
+8.4.1 integration tests with style
