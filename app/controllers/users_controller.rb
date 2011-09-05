@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   before_filter :authenticate, :only => [:index, :edit, :update]
   before_filter :correct_user, :only => [:edit, :update]
   before_filter :admin_user,  :only => :destroy
+  before_filter :signed_out_user,  :only => [:create, :new]
 
   def index
     @title = "All users"
@@ -54,6 +55,10 @@ class UsersController < ApplicationController
   end
 
   private
+
+  def signed_out_user
+    redirect_to(root_path) unless !current_user.signed_in?
+  end
 
   def admin_user
     redirect_to(root_path) unless current_user.admin?
