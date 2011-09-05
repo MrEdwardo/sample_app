@@ -1,1 +1,1 @@
-9.4.1 Destroying sessions
+10.1.2 Enabling edits
